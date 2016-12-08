@@ -21,11 +21,12 @@ comments:
   # Name of the branch being used. Must match the one sent in the URL of the
   # request.
   branch: "master"
+  commitMessage: "New submission."
 
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "entry{@timestamp}"
+  filename: "entry-{@timestamp}"
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
@@ -39,7 +40,7 @@ comments:
     date:
       type: date
       options:
-        format: "timestamp-seconds"
+        format: "iso8601"
 
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
