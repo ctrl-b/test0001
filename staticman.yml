@@ -14,7 +14,7 @@ comments:
   # When allowedOrigins is defined, only requests sent from one of the domains
   # listed will be accepted. The origin is sent as part as the `options` object
   # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
-  #allowedOrigins: ["localhost", "ulisesrojas.ca"]
+  allowedOrigins: ["localhost", "ulisesrojas.ca"]
 
   # (*) REQUIRED
   #
@@ -29,7 +29,7 @@ comments:
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
-  format: "yaml"
+  format: "frontmatter"
 
   # List of fields to be populated automatically by Staticman and included in
   # the data file. Keys are the name of the field. The value can be an object
@@ -52,6 +52,20 @@ comments:
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
   # with Mailgun, which you can get for free at http://mailgun.com.
+  # notifications:
+  #   # Enable notifications
+  #   enabled: false
+
+  #   # (!) ENCRYPTED
+  #   #
+  #   # Mailgun API key
+  #   apiKey: "1q2w3e4r"
+
+  #   # (!) ENCRYPTED
+  #   #
+  #   # Mailgun domain (encrypted)
+  #   domain: "4r3e2w1q"
+
   # (*) REQUIRED
   #
   # Destination path (directory) for the data files. Accepts placeholders.
