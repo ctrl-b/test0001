@@ -80,3 +80,26 @@ comments:
   # the name of the field and values are possible transformation types.
   transforms:
     email: md5
+
+submissions:
+  # (*) REQUIRED
+  allowedFields: ["name", "section", "email", "url", "message"]
+  branch: "master"
+  commitMessage: "New submission."
+  filename: "entry-{@timestamp}"
+
+  # The format of the generated data files. Accepted values are "json", "yaml"
+  # or "frontmatter"
+  format: "frontmatter"
+
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "iso8601"
+  moderation: true
+  name: "uxbot.io"
+  path: "data/submissions/{options.slug}"
+  requiredFields: ["name", "email", "message"]
+  transforms:
+    email: md5
